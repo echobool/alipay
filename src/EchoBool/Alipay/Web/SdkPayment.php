@@ -42,6 +42,8 @@ class SdkPayment
 
 	private $exter_invoke_ip;
 
+	private $extra_common_param;
+
 	private $key;
 
 	private $transport;
@@ -75,6 +77,7 @@ class SdkPayment
 			'show_url' => $this->show_url,
 			'anti_phishing_key' => $this->anti_phishing_key,
 			'exter_invoke_ip' => $this->exter_invoke_ip,
+			'extra_common_param' => $this->extra_common_param,
 			'_input_charset' => strtolower($this->_input_charset),
 			'qr_pay_mode' => $this->qr_pay_mode
 		);
@@ -190,6 +193,12 @@ class SdkPayment
 	public function setExterInvokeIp($exter_invoke_ip)
 	{
 		$this->exter_invoke_ip = $exter_invoke_ip;
+		return $this;
+	}
+
+	public function setExtraCommonParam(array $extra_common_param)
+	{
+		$this->extra_common_param = json_encode($extra_common_param);
 		return $this;
 	}
 

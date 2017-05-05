@@ -3,7 +3,8 @@ Alipay
 
 支付宝SDK在Laravel5/Lumen封装包。
 
-该拓展包想要达到在Laravel5/Lumen框架下，便捷使用支付宝的目的。
+该拓展包想要达到在Laravel5/Lumen框架下，便捷使用支付宝的目的。本包是修改 latrell/alipay 而来，因原包没法传递自定义参数，可能是我没有理解到位，自己加以修改了一下。
+
 
 ## 安装
 
@@ -29,7 +30,7 @@ composer require echobool/alipay dev-master
     ]
 ```
 
-运行 `php artisan vendor:publish` 命令，发布配置文件到你的项目中。
+运行 `php artisan vendor:publish --provider="EchoBool\Alipay\AlipayServiceProvider"` 命令，发布配置文件到你的项目中。
 
 ### Lumen
 在`bootstrap/app.php`里注册服务。
